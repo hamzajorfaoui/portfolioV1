@@ -1,0 +1,26 @@
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+}
+.logo{
+margin-left: 20px;
+.name{
+    fill:#fff,
+}
+}
+.menu span{
+    padding:8px;
+    cursor: pointer;
+    font-weight: 600;
+    &:hover{
+     background-color: rgba(255, 255, 255, 0.253);
+    }
+}

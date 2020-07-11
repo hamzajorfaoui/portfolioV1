@@ -1,0 +1,14 @@
+.homePage{
+    height: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    >div{
+        margin-top: -80px;
+    }
+    .hello{
+        color: #808080;
+    }
+}

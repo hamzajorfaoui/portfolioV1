@@ -1,0 +1,95 @@
+.About{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    @media(max-width:700px){
+        flex-direction: column;
+        .about_me{
+            margin-top: 0px !important;
+            margin-bottom: 60px;
+            margin-right: 3px;
+            margin-left: 10px;
+            .about_1 div{
+                margin-bottom: 10px !important;
+                font-size: 15px !important;
+                font-weight: 500 !important;
+            }
+            .technologies{
+                .technologie{
+                    height: 30px !important;
+                    width: 30px !important;
+                .icone{
+                    font-size: 20px !important;
+                }
+                }
+            }
+        }
+    }
+    .my_pic{
+        flex:1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            position: absolute;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+    }
+    .about_me{
+        margin-top: 15%;
+        margin-right: 3px;
+        flex:1;
+        text-align: left;
+        .title{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            >div{
+            flex:1;
+            height: 3px;
+            margin-top: 5px;
+            background-color: #808080;
+            }
+            >span{
+                font-size: 30px;
+                font-weight: bold;
+                margin-right: 15px;
+            }
+        }
+        .about_1{
+            div{
+                margin-bottom: 30px;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+        .technologies{
+            display: flex;
+            flex-direction: row;
+            .technologie{
+                background-color: #fff;
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                filter: grayscale(100%);
+                transition: filter 1s;
+                &:hover{
+                    filter: grayscale(0%);
+                }
+                .icone{
+                    font-size: 30px;
+                    
+                }
+            }
+        }
+    }
+}

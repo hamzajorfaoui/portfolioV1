@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.backimage{
+  position: absolute;
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+}
+.line_left{
+  position: absolute;
+  left: 5%;
+  top: 0;
+  bottom: 0;
+}
+.line1{
+  position: absolute;
+  bottom: 70px;
+  width: 2px;
+  background-color: #fff;
+  height: 0px;
+}
+.social_media{
+  position: absolute;
+  bottom: 10px;
+  left: -8px;
+  z-index: 1000;
+  a{
+    opacity: 0;
+    font-size: 20px;
+    color: #808080;
+    transition: color .5s ease-out;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+.line2{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  width: 2px;
+  background-color: #fff;
+  transform: translateY(-100%);
+}
+.line3{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  height: 2px;
+  background-color: #fff;
+  transform: translateX(-100%);
+}
+.trans_section{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 5%;
+  background-color: rgba(255, 255, 255, 0.336);
+  opacity: 0;
+}
+.App_grid{
+  position: absolute;
+  right: 5%;
+  left: 5%;
+  display: grid;
+  height: 100vh;
+  grid-template-areas: 'navbar''content''footer';
+  grid-template-rows: 80px 1fr 60px;
+}
+.Nav{
+  grid-area: navbar;
+}
+.content{
+  grid-area: content;
+  opacity: 0;
+}
+.footer_app{
+  grid-area: footer;
+  padding-left: 20px;
+}
