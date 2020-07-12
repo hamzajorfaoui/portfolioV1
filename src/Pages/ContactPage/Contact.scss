@@ -1,0 +1,70 @@
+.Contact{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0px 10px;
+    .title{
+
+        h1{
+            font-weight: bold;
+            line-height: 30px;
+            font-size: 60px;
+            span{
+                opacity: .5;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.form_field{
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    margin: 0px auto 40px;
+    .field_label{
+        position: absolute;
+        top: -20px;
+        left: 2px;
+        font-size: 12px;
+        color: #808080;
+        transition: all .5s;
+    }
+    .field{
+        width: 100%;
+        background-color: transparent;
+        height: 30px;
+        border: 0;
+        border-bottom: 1px solid #808080;
+        outline: 0;
+        color: #fff;
+        resize:vertical;
+        transition:border-bottom-color .3s ease-in-out;
+        &::placeholder {
+            color: transparent;
+        }
+        &:focus {
+        border-bottom-color:#fff;
+        ~.field_label{
+           font-size: 12px !important;
+           top:-20px !important;
+           color: #fff;
+        }}
+        &:placeholder-shown ~ .field_label {
+            font-size: 15px;
+            cursor: text;
+            top: 0px;
+          }
+    }
+    .field_submit{
+        cursor: pointer;
+        width: 100%;
+        height: 40px;
+        color: #fff;
+        background-color: #444444;
+        border: 0;
+        outline: 0;
+        font-weight: bold;
+        font-size: 15px;
+    }
+}

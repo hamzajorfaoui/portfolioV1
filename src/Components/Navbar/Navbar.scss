@@ -16,11 +16,26 @@ margin-left: 20px;
     fill:#fff,
 }
 }
-.menu span{
+.menu {
+    margin-right: 12px;
+    position: relative;
+    display: flex;
+    .selected{
+        position: absolute;
+        top: -5px;
+        z-index: -1;
+        height: 0px;
+        width: 0px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: .2;
+        transition: transform .5s ease-in , width .5s ease-in .5s, height .5s ease-in .5s;
+    }
+    .item{
     padding:8px;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
     font-weight: 600;
-    &:hover{
-     background-color: rgba(255, 255, 255, 0.253);
-    }
+}
 }

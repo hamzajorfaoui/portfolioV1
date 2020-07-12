@@ -17,6 +17,9 @@
   min-height: 100%;
   opacity: 0;
 }
+.lines{
+  z-index: 10;
+}
 .line_left{
   position: absolute;
   left: 5%;
@@ -83,6 +86,7 @@
 }
 .Nav{
   grid-area: navbar;
+  z-index: 10;
 }
 .content{
   grid-area: content;

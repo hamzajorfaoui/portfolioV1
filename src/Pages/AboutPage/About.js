@@ -44,7 +44,7 @@ export default function About(){
       <div className="my_pic">
         <img src={pic}></img>
       </div>
-      <div className="about_me">
+      <div className="about_me"> 
           <div className="title">
            <div></div>
            <span>About</span>

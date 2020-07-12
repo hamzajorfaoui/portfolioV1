@@ -20,7 +20,7 @@ function App() {
   }});
   t1.to(".line1",{duration:1,height:'calc(100vh - 70px)' ,delay:0.5 , ease:"slow"} , "-=0.5");
   t1.to(".line3",{duration:1,x:0});
-  t1.to(".trans_section",{duration:1,opacity:0.8},"-=1");
+  t1.to(".trans_section",{duration:.1,opacity:0.8},"-=1");
   t1.to(".line2",{duration:1,y:0});
   t1.to(".backimage",{duration:1,opacity:.7});
   t1.to(".content",{duration:0.5,opacity:1} , '-=0.5')    

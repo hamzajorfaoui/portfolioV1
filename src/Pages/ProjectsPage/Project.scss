@@ -1,0 +1,102 @@
+.Project{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -6%;
+    right: -6%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.oneProject{
+    position: relative;
+    height: 60%;
+    width: 50%;
+    margin-right: 20%;
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .pic{
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        opacity: 0.3;
+    }
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .title{
+        position: absolute;
+        margin-left: -30%;
+    span{
+        font-size: 100px;
+        font-weight: bold;
+    }
+    }
+    .info{
+        position: absolute;
+        left: -30%;
+        right: 0;
+        bottom: 0;
+        div{
+            position: relative;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            min-width: 150px;
+            width: 20%;
+        .line{
+            width: calc(100% - 70px);
+            height: 1px;
+            transform: translateX(5px);
+            background-color: #fff;
+        }
+        .icon-circle{
+            position: absolute;
+            right: 0;
+            height: 40px;
+            width: 40px;
+        }
+        .circle{
+            position: absolute;
+            right:17px;
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            background-color: #fff;
+            transition: transform 1s;
+            transform: scale(0); 
+        }            
+        }
+
+    }
+    .info:hover{
+      .line{
+        animation: resize-line .8s ;
+      }
+      .circle{
+        animation: scale-circle .8s infinite .8s;
+      }
+    }
+}
+@keyframes scale-circle {
+    0% { transform: scale(0.5); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0); }
+}
+@keyframes resize-line {
+    0% { width: 50% }
+    50% { width: 0px }
+    100% { width: calc(100% - 70px); }
+}
