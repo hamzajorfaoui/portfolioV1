@@ -43,7 +43,7 @@ function App() {
            <div className="line3"></div>
        </div>
        <BrowserRouter>
-       <div className="App_grid">
+      <div className="App_grid">
       <div className="Nav">
        <Navbar></Navbar>
       </div>
@@ -55,7 +55,7 @@ function App() {
        <div className="footer_app">
          <Footer></Footer>
         </div>  
-       </div>
+      </div>
     
        </BrowserRouter>
 

@@ -8,14 +8,14 @@ export default function Home(){
     const {App_animation_complete} = useContext(AnimationC); 
     useEffect(()=>{
     function start(){
-        console.log("componentdidmount")
+      gsap.from(".homePage div span",{duration:1,opacity:0,stagger:0.3});
     }
     start();  
     //componentwillunmount
     return function clean(){
-        console.log("componentwillunmount")
-    }        
-    })
+    
+    };       
+    },[]);
     useEffect(()=>{
     if(App_animation_complete){
         gsap.to(".line3",{duration:1,x:0});

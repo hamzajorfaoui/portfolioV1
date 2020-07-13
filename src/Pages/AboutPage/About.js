@@ -33,13 +33,23 @@ export default function About(){
     const mouseO=(e , color)=>{
      e.target.childNodes[0].style.color=color;
     }
-    // useEffect(()=>{
-    // if(App_animation_complete){
-    //     gsap.to(".line3",{duration:1,x:"50%"});
-    // }
-    // },[App_animation_complete])
+    useEffect(()=>{
+        function start(){
+          let T1 = gsap.timeline();
+          T1.from(".about_me .title div",{duration:.5,flex:0});
+          T1.from(".about_me .title span",{duration:.5,opacity:0});
+          T1.from(".about_me .technologies .technologie",{duration:.5,scale:0,stagger:.3});
+          T1.from(".my_pic img",{duration:1,scale:0},'=-0.5');
 
-    return (
+        }
+        start();  
+        //componentwillunmount
+        return function clean(){
+        
+        };       
+    },[]);
+
+    return ( 
     <div className="About">
       <div className="my_pic">
         <img src={pic}></img>
