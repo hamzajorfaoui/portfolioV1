@@ -6,11 +6,17 @@
     .title{
 
         h1{
+            .titre{
             font-weight: bold;
             line-height: 30px;
-            font-size: 60px;
-            span{
-                opacity: .5;
+            font-size: 60px;     
+            opacity: 0;
+            transform: translateY(-100%);           
+            }
+            .sous_titre{
+                opacity: 0;
+                transform: translateY(-100%);
+                color: #808080;
                 font-size: 20px;
                 font-weight: 500;
             }
@@ -22,6 +28,8 @@
     max-width: 400px;
     width: 100%;
     margin: 0px auto 40px;
+    opacity: 0;
+    transform: translateY(-100%);
     .field_label{
         position: absolute;
         top: -20px;

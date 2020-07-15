@@ -1,9 +1,24 @@
 import React from 'react';
 import './Project.scss';
 import Pic_project from'../../Assets/P1.jpg';
+import gsap from 'gsap/gsap-core';
+
+export function project_animation_leave(){
+    gsap.to(".Project .oneProject .pic",{duration:1,opacity:0,x:100});
+    gsap.to(".Project .details",{duration:1,opacity:0,y:100,stagger:0});
+}
 export default function Project(){
 
-    
+    React.useEffect(()=>{
+        function start(){
+            gsap.from(".Project",{duration:0.1,opacity:0,delay:1});
+            gsap.from(".Project .oneProject .pic",{duration:1,opacity:0,x:100,delay:1});
+            gsap.from(".Project .details",{duration:1,opacity:0,y:100,stagger:0,delay:1});
+          }
+          start();  
+          return function clean(){
+          };
+    },[])
     const [Openinfo , setOpeninfo] =React.useState(false);
     const Open_Info=()=>{
      document.getElementById('OneP').classList.add("open");

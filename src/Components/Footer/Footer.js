@@ -1,14 +1,15 @@
 import React from 'react';
 import './Footer.scss'
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 
 export default function Footer(){
 
+    var path = useLocation().pathname;
     return(
-        <div className="Footer">
+        <div className={path!="/project"?"Footer":"Footer disable"}>
             <div className="page_numbers">
-              <NavLink activeClassName="active" exact to="" className="numero">
+              <NavLink activeClassName="active" exact to="" className="numero" >
               <div></div>
               <span>01</span>
               </NavLink>

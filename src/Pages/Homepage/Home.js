@@ -1,26 +1,20 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect } from 'react';
 import './Home.scss';
-import { Link } from 'react-router-dom';
-import {AnimationC} from '../../App';
 import gsap from 'gsap';
 
-export default function Home(){
-    const {App_animation_complete} = useContext(AnimationC); 
+export function home_animation_leave(){
+  gsap.to(".homePage div span",{duration:1,opacity:0,stagger:0.3});
+}
+const  Home=React.memo(()=>{
     useEffect(()=>{
     function start(){
-      gsap.from(".homePage div span",{duration:1,opacity:0,stagger:0.3});
+      gsap.from(".homePage div span",{duration:1,opacity:0,stagger:0.3 , delay:2});
     }
     start();  
     //componentwillunmount
     return function clean(){
-    
     };       
-    },[]);
-    useEffect(()=>{
-    if(App_animation_complete){
-        gsap.to(".line3",{duration:1,x:0});
-    }
-    },[App_animation_complete])
+    });
     return (
     <div className="homePage">
        <div>
@@ -30,5 +24,6 @@ export default function Home(){
        </div>
     </div>
     )
-}
+});
+export default Home;
 

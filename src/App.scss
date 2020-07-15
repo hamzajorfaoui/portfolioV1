@@ -18,19 +18,33 @@
   opacity: 0;
 }
 .lines{
-  z-index: 10;
+  z-index: 11;
+  transition: background-color 1s;
+  &.white{
+    background-color: #fff !important;
+    color: #fff;
+  }
+  &.black{
+    background-color: #000 !important;
+    color: #000;
+    .trans_section{
+      background-color: #000 !important;
+    }
+  }
 }
 .line_left{
   position: absolute;
   left: 5%;
   top: 0;
   bottom: 0;
+  background-color: inherit;
+  color: inherit;
 }
 .line1{
   position: absolute;
   bottom: 70px;
   width: 2px;
-  background-color: #fff;
+  background-color: inherit;
   height: 0px;
 }
 .social_media{
@@ -44,7 +58,7 @@
     color: #808080;
     transition: color .5s ease-out;
     &:hover{
-      color: #fff;
+      color: inherit;
     }
   }
 }
@@ -54,7 +68,7 @@
   bottom: 0;
   right: 5%;
   width: 2px;
-  background-color: #fff;
+  background-color: inherit;
   transform: translateY(-100%);
 }
 .line3{
@@ -63,7 +77,7 @@
   right: 0;
   top: 80px;
   height: 2px;
-  background-color: #fff;
+  background-color: inherit;
   transform: translateX(-100%);
 }
 .trans_section{
@@ -73,6 +87,7 @@
   height: 80px;
   width: 5%;
   background-color: rgba(255, 255, 255, 0.336);
+  transition: background-color 1s;
   opacity: 0;
 }
 .App_grid{
@@ -81,18 +96,42 @@
   left: 5%;
   display: grid;
   height: 100vh;
-  grid-template-areas: 'navbar''content''footer';
-  grid-template-rows: 80px 1fr 60px;
+  grid-template-areas: 'navbar''content';
+  grid-template-rows: 80px 1fr;
 }
 .Nav{
   grid-area: navbar;
-  z-index: 10;
+  z-index: 11;
 }
 .content{
+  position: relative;
   grid-area: content;
-  opacity: 0;
+}
+.content >div{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .footer_app{
-  grid-area: footer;
-  padding-left: 20px;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  right: 5%;
+  left: 5%;
+}
+.fade-enter{
+  opacity: 0;
+  z-index: -1;
+}
+.fade-enter-done{
+  opacity: 1;
+  transition: opacity 1s;
+}
+.fade-exit{
+  opacity: 1;
+}
+.fade-exit-active{
+  opacity: 0;
+  transition: opacity 1s;
 }

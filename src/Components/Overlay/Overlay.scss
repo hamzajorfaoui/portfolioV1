@@ -1,0 +1,50 @@
+.overlay{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: -6%;
+    right: -6%;
+    background-color: #fff;
+    transition: transform 1s , border-bottom-left-radius 1s .2s, border-bottom-right-radius 1s .2s;
+    transform: translateY(-100%) translateX(100%);
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    &.open{
+        transform: translateY(0%) translateX(0%) !important;
+        border-radius: 0%;
+        .links{
+            opacity: 1 !important;
+        }
+    }
+    .links{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    opacity: 0;
+    transition: opacity .2s; 
+    .item_overlay{
+        font-size: 30px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        line-height: 50px;
+        opacity: .3;
+        transition: opacity 1s;
+        &.active{
+            color: #000;
+            opacity: .8;
+            &:hover{
+                opacity: 1;
+            }
+        }
+        &:hover{
+            opacity: .6;
+        }
+    }
+    }
+}
