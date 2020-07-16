@@ -1,8 +1,8 @@
 .navbar{
-    position: fixed;
-    top: 0;
-    left: 5%;
-    right: 5%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0%;
     height: 80px;
     display: flex;
     flex-direction: row;
@@ -12,6 +12,7 @@
 }
 .logo{
 margin-left: 20px;
+text-decoration: none;
 .name{
     transition: fill 1s;
     &.white{
