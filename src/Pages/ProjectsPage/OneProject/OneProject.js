@@ -63,7 +63,7 @@ export default function OneProject({close}){
 
                 <div className="infoComplete">
                  <div className="_title"><h1>About</h1></div>
-                 <div className="About_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </div>
+                 <div className="About_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut liquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate </div>
                  <div className="_title"><h1>Technologie</h1></div>
                  <div className="Technologies_text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit,</div>
                  <div className="_title"><h1>Project Source File</h1></div>

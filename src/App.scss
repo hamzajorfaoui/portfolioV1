@@ -6,9 +6,10 @@
   background-color: #000;
   color: #fff;
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   position: relative;
   overflow: hidden;
+  font-family: "Roboto";
 }
 .backimage{
   position: absolute;
@@ -95,7 +96,7 @@
   right: 5%;
   left: 5%;
   display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-areas: 'navbar''content';
   grid-template-rows: 80px 1fr;
 }
@@ -134,4 +135,19 @@
 .fade-exit-active{
   opacity: 0;
   transition: opacity 1s;
+}
+
+@media screen and (max-height:600px){
+  .trans_section{
+    height: 60px !important;
+  }
+  .App_grid{
+    grid-template-rows: 60px 1fr !important;
+  }
+  .line3{
+    top: 60px !important;
+  }
+  .navbar{
+    height: 60px !important;
+  }
 }

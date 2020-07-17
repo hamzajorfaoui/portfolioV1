@@ -15,6 +15,7 @@ margin-left: 20px;
 text-decoration: none;
 .name{
     transition: fill 1s;
+    font-family: "Roboto";
     &.white{
         fill: #fff !important;
       }
@@ -44,6 +45,7 @@ text-decoration: none;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    letter-spacing: 1px;
     transform: translateX(100%);
     opacity: 0;
     &.active{

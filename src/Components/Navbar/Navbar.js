@@ -17,7 +17,7 @@ export default function Navbar(){
    React.useEffect(()=>{
    switch (location.pathname) {
   case "/contact":
-    Nav_selected=162;
+    Nav_selected=172;
     select_active_nav();
       break;
   case "/project":
@@ -60,10 +60,10 @@ export default function Navbar(){
           <Link to="/" exact="true" className="logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="100" height="51" viewBox="0 0 125 51" style={{transform:'scale(0)'}} className="svg_logo">
             <g transform="translate(-1067.974 -4166.519)">
-              <text transform="translate(1067.974 4196.519)" className={Overlay_menu_open?"name black":"name white"} fontSize="28" fontFamily="SegoeUI, Segoe UI" letterSpacing="0.278em">
+              <text transform="translate(1067.974 4196.519)" className={Overlay_menu_open?"name black":"name white"} fontSize="28"  letterSpacing="0.278em">
                 <tspan x="0" y="0">HaMZA</tspan>
               </text>
-              <text transform="translate(1092.974 4214.519)" className={Overlay_menu_open?"name black":"name white"} fontSize="12" fontFamily="SegoeUI, Segoe UI" letterSpacing="0.278em" opacity="0.3">
+              <text transform="translate(1092.974 4214.519)" className={Overlay_menu_open?"name black":"name white"} fontSize="12"  letterSpacing="0.278em" opacity="0.3">
                 <tspan x="0" y="0">Jorfaoui</tspan>
               </text>
             </g>

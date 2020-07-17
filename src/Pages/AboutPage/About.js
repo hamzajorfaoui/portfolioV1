@@ -8,12 +8,12 @@ import pic from '../../Assets/photo-15.jpg';
 
 
 export function about_animation_enter(){
-    let T1 = gsap.timeline({ delay:1.1 ,paused:true});
+    let T1 = gsap.timeline({ delay:1.1 ,paused:true}); 
     T1.to(".About",{duration:.9,y:0,opacity:1})
     T1.to(".about_me .title div",{duration:.5,flex:1},'=-0.9');
-    T1.to(".about_me .title span",{duration:.5,opacity:1});
-    T1.to(".about_me .about_1 div",{duration:.5,opacity:1,stagger:.2 , ease:"slow"});
-    T1.to(".about_me .technologies .technologie",{duration:.25,scale:1,stagger:.3});
+    T1.to(".about_me .title span",{duration:.5,opacity:1},"-=0.5");
+    T1.to(".about_me .about_1 div",{duration:1,opacity:1,stagger:.5 , ease:"slow"});
+    T1.to(".about_me .technologies .technologie",{duration:1,x:0,opacity:1,stagger:.3});
     T1.to(".my_pic img",{duration:1,scale:1},'=-0.5');
     T1.play();  
 }

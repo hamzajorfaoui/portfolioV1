@@ -86,7 +86,8 @@
                 align-items: center;
                 cursor: pointer;
                 filter: grayscale(100%);
-                transform: scale(0);
+                transform: translateX(-10%);
+                opacity: 0;
                 transition: filter 1s;
                 &:hover{
                     filter: grayscale(0%);

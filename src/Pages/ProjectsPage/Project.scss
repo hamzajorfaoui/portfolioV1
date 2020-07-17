@@ -7,6 +7,15 @@
     height: fit-content;
     display: flex;
     flex-direction: column;
+    @media screen and (max-height:600px){
+        top: -60px !important;
+        .P{
+
+            .oneProject  .details{
+              padding: 20px 7% 0px;
+            }
+        }
+    }
 }
 .P{
     height: 100vh;
@@ -19,7 +28,7 @@
 .numbers{
     position: absolute;
     bottom: 0px !important;    
-    right: -1% !important;
+    right: -8px !important;
     top: unset !important;
     left: unset !important;
     color: #808080;
