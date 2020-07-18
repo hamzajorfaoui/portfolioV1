@@ -89,6 +89,7 @@ export default function Project(){
           }
           start();  
           return function clean(){
+            clearInterval(timeoutID);
           };
     },[])
     return(

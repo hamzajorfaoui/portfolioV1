@@ -38,6 +38,7 @@
         &.active{
             color: #000;
             opacity: .8;
+            pointer-events: none;
             &:hover{
                 opacity: 1;
             }

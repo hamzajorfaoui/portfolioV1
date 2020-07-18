@@ -14,15 +14,6 @@
                 font-size: 15px !important;
                 font-weight: 500 !important;
             }
-            .technologies{
-                .technologie{
-                    height: 30px !important;
-                    width: 30px !important;
-                .icone{
-                    font-size: 20px !important;
-                }
-                }
-            }
         }
     }
     .my_pic{
@@ -70,32 +61,15 @@
                 opacity: 0;
                 font-size: 20px;
                 font-weight: 500;
+                transform: translateY(-100%);
             }
         }
         .technologies{
             display: flex;
             flex-direction: row;
-            .technologie{
-                background-color: #fff;
-                border-radius: 50%;
-                height: 50px;
-                width: 50px;
-                margin-right: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                filter: grayscale(100%);
+            >div{
                 transform: translateX(-10%);
                 opacity: 0;
-                transition: filter 1s;
-                &:hover{
-                    filter: grayscale(0%);
-                }
-                .icone{
-                    font-size: 30px;
-                    
-                }
             }
         }
     }

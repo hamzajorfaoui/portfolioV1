@@ -7,6 +7,25 @@
     justify-content: center;
     >div{
         margin-top: -80px;
+        .name{
+                position: relative;
+                // background-color: #fff;
+                color: #000;
+                padding: 0px 5px;
+                margin-left: 2px;
+                .name_text{
+                position: relative;  
+                }
+                .name_background{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 100%;
+                    left: 0;
+                    background-color: #fff;
+                }
+        }
     }
     .hello{
         color: #808080;

@@ -32,7 +32,7 @@
             grid-column-gap: 0px;
             .infoComplete{
                 padding-top: 0px !important;
-                div{
+                >div{
                     margin-bottom: 5px !important;
                 }
                 ._title{
@@ -44,6 +44,8 @@
                 text-align: left;
                 span{
                     margin-left: 0px !important;
+                    margin-right: auto !important;
+                    padding-left: 5px;
                 }
             }
             .info div{
@@ -87,8 +89,26 @@
                 margin: 0;
                 padding: 0;
             }
-            div{
+            >div{
                 margin-bottom: 20px;
+                
+            }
+            .Technologies_text{
+                display: flex;
+            }
+            .ProjectSource_text{
+
+                a{
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: #fff;
+                    span{
+                        padding-right: 5px;
+                    }
+                }
+                svg{
+                    font-size: 23px;
+                }
             }
         }
     }
@@ -131,8 +151,12 @@
     }
     .title{
         position: absolute;
+        top: 0;
+        bottom: 0;
         margin-left: -30%;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     span{
         font-size: 100px;

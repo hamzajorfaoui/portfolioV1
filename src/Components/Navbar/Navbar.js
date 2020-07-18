@@ -17,11 +17,11 @@ export default function Navbar(){
    React.useEffect(()=>{
    switch (location.pathname) {
   case "/contact":
-    Nav_selected=172;
+    Nav_selected=176;
     select_active_nav();
       break;
   case "/project":
-    Nav_selected=88;
+    Nav_selected=93;
     select_active_nav();
       break;
   default:

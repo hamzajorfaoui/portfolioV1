@@ -4,6 +4,8 @@ import AppRouter from './Router/AppRouter';
 import gsap from 'gsap';
 import {Navbar,Footer, Overlay} from './Components';
 import backimage from './Assets/TFSA5c2.jpg';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn , faGithub} from '@fortawesome/free-brands-svg-icons';
 import { BrowserRouter } from 'react-router-dom';
@@ -15,6 +17,7 @@ function App() {
   const value_context_AnimationC = {Overlay_menu_open ,SetOm};
 
   useEffect(()=>{
+  library.add(fab);
   let t1 = gsap.timeline({onComplete:()=>{SetAac(true)}});
   t1.to(".line_left a",{duration:1,opacity:1 ,delay:0.5 , ease:"slow" ,
    stagger:{

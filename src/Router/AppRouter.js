@@ -31,7 +31,6 @@ const  AppRouter=React.memo((props)=>{
                         case "/project":
                             project_animation_leave();
                             break;
-                    
                         default:
                             break;
                     }
