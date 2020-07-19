@@ -7,19 +7,16 @@ import { Technologie } from '../../../Components';
 export default function OneProject({close}){
 
     React.useEffect(()=>{
-        if(close == false){
+        if(!close){
             Close_Info();
-        }else if(close){
+        }else{
             gsap.from(current_Picture.current,{duration:1,opacity:0,x:100});
             gsap.from(current_Details.current,{duration:1,opacity:0,x:-100});
         }
     },[close]);
     React.useEffect(()=>{
         function start(){
-            // gsap.from(".Project",{duration:0.1,opacity:0,delay:1});
-            // gsap.from(".Project .oneProject .pic",{duration:1,opacity:0,x:100,delay:1});
-            // gsap.from(".Project .details",{duration:1,opacity:0,y:100,stagger:0,delay:1});
-            console.log(close)
+           
           }
           start();  
           return function clean(){
@@ -56,7 +53,7 @@ export default function OneProject({close}){
     return(
            <div className="oneProject" id="OneP" ref={current_P}>
                <div className="pic" ref={ current_Picture}>
-                     <img src={Pic_project}></img>
+                     <img src={Pic_project} alt="Project image"></img>
                </div>
             <div className="details" ref={current_Details}>
                 <div className="title">

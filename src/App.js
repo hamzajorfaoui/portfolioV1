@@ -29,7 +29,6 @@ function App() {
   t1.to(".trans_section",{duration:.1,opacity:0.8},"-=1");
   t1.to(".line2",{duration:1,y:0});
   t1.to(".backimage",{duration:1,opacity:.7});
-  t1.to(".content",{duration:0.5,opacity:1} , '-=0.5');
 
   window.matchMedia('(max-width:700px)').addListener((e)=>{
    if(!e.matches){
@@ -42,7 +41,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <img src={backimage} className="backimage"></img>
+      <img src={backimage} className="backimage" alt="backgroud"></img>
        <div className={Overlay_menu_open?"lines black":"lines white"}>
            <div className="trans_section"></div>
            <div className="line_left">

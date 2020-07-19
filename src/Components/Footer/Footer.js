@@ -7,7 +7,7 @@ export default function Footer(){
 
     var path = useLocation().pathname;
     return(
-        <div className={path!="/project"?"Footer":"Footer disable"}>
+        <div className={path!=="/project"?"Footer":"Footer disable"}>
             <div className="page_numbers">
               <NavLink activeClassName="active" exact to="" className="numero" >
               <div></div>
