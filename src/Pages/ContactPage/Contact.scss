@@ -3,6 +3,7 @@
     justify-content: center;
     flex-direction: column;
     margin: 0px 10px;
+    height: calc(100% - 80px);
     .title{
 
         h1{
@@ -79,6 +80,23 @@
         font-size: 15px;
         &:disabled{
             cursor: not-allowed;
+        }
+    }
+}
+
+@media screen and (max-width:700px){
+    .Contact{
+        height: calc(100% - 60px);
+        .title{
+            h1{
+                .titre{
+                line-height: 25px;
+                font-size: 50px;            
+                }
+                .sous_titre{
+                    font-size: 15px;
+                }
+            }
         }
     }
 }

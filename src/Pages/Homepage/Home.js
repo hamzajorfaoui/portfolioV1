@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import './Home.scss';
 import gsap from 'gsap';
+import backimage from '../../Assets/TFSA5c2.jpg';
 
 export function home_animation_leave(){
+  gsap.to(".backimage",{duration:1,opacity:0});
   gsap.to(".homePage div span",{duration:1,opacity:0,stagger:0.3 , onStart:()=>{
     gsap.to(".homePage .name_background",{duration:.5,right:"100%",delay:.3});
   }});
@@ -10,6 +12,7 @@ export function home_animation_leave(){
 const  Home=React.memo(()=>{
     useEffect(()=>{
     function start(){
+      gsap.to(".backimage",{duration:1,opacity:.7});
       gsap.from(".homePage div >span",{duration:1,opacity:0,stagger:0.3 , delay:1.1 , onStart:()=>{
         gsap.to(".homePage .name_background",{duration:1,right:0,delay:.1});
       }});
@@ -21,6 +24,7 @@ const  Home=React.memo(()=>{
     });
     return (
     <div className="homePage">
+        <img src={backimage} className="backimage" alt="backgroud"></img>
        <div>
         <span className="hello"> &lt;HELLO WORD&gt;</span><br></br>
         <span>My name is 

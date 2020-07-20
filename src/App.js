@@ -3,7 +3,6 @@ import './App.scss';
 import AppRouter from './Router/AppRouter';
 import gsap from 'gsap';
 import {Navbar,Footer, Overlay} from './Components';
-import backimage from './Assets/TFSA5c2.jpg';
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {fab } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -28,7 +27,6 @@ function App() {
   t1.to(".line3",{duration:1,x:0});
   t1.to(".trans_section",{duration:.1,opacity:0.8},"-=1");
   t1.to(".line2",{duration:1,y:0});
-  t1.to(".backimage",{duration:1,opacity:.7});
 
   window.matchMedia('(max-width:700px)').addListener((e)=>{
    if(!e.matches){
@@ -41,7 +39,6 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <img src={backimage} className="backimage" alt="backgroud"></img>
        <div className={Overlay_menu_open?"lines black":"lines white"}>
            <div className="trans_section"></div>
            <div className="line_left">

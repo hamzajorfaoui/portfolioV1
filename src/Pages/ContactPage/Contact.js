@@ -9,6 +9,16 @@ export function conatct_animation_leave(){
     T1.play();  
 }
 export default function Contact(){
+    React.useEffect(()=>{
+        function start(){
+            let T1 = gsap.timeline({delay:1});
+            T1.to(".Contact .title h1 span",{duration:.5 , y:0,opacity:1,stagger:0.25});
+            T1.to(".Contact .form_contact .form_field",{duration:1 , y:0,opacity:1,stagger:0.25});
+        }
+        start();  
+        return function clean(){
+        };       
+    },[]);
     var Full_Name= React.useRef(null);
     var Email    = React.useRef(null);
     var Message  = React.useRef(null);
@@ -19,17 +29,6 @@ export default function Contact(){
     };
     const [error_validation , Seterror] = React.useState(init_error);
     const [btn_disabled , Setdisable] = React.useState(false);
-    React.useEffect(()=>{
-        function start(){
-            let T1 = gsap.timeline({delay:1});
-            T1.to(".Contact .title h1 span",{duration:.5 , y:0,opacity:1,stagger:0.25});
-            T1.to(".Contact .form_contact .form_field",{duration:1 , y:0,opacity:1,stagger:0.25});
-        }
-        start();  
-        //componentwillunmount
-        return function clean(){
-        };       
-        });
     const is_empty=(val)=>{
             return val.trim()==="";   
     }

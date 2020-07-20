@@ -3,6 +3,7 @@
     height: 60%;
     width: 50%;
     margin-right: 20%;
+    margin-top: 80px;
     background-color: #000;
     display: flex;
     justify-content: flex-start;
@@ -130,6 +131,7 @@
         }
     }
     @media screen and (max-width:700px) {
+        margin-top: 60px;
         .title{
             span{
                 font-size: 70px !important;
@@ -155,9 +157,9 @@
         bottom: 0;
         margin-left: -30%;
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
+        text-align: left;
     span{
         font-size: 100px;
         font-weight: bold;
